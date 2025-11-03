@@ -1,10 +1,13 @@
 E-commerce Sales Analysis Dashboard
-A comprehensive e-commerce sales dashboard built with Power BI to analyze sales performance, customer behavior, and product trends from a CSV dataset.
 
-Project Overview
-This project involves the analysis of e-commerce sales data. The goal is to transform raw sales data into actionable insights using business intelligence tools. The core of this project is a Power BI report (ec_Data Modeling.pbix) that connects to a CSV data source (ec_data.csv) to visualize key performance indicators (KPIs) and trends.
+A comprehensive Power BI dashboard built to analyze e-commerce sales performance, customer behavior, and product trends using a CSV dataset.
 
-This dashboard is designed to help business stakeholders (like sales managers, marketing teams, and executives) make data-driven decisions by providing a clear view of:
+📘 Project Overview
+
+This project focuses on analyzing e-commerce sales data to transform raw transactional data into actionable business insights.
+The core component is a Power BI report (ec_Data Modeling.pbix) that connects to a CSV dataset (ec_data.csv) and visualizes key performance indicators (KPIs) and trends.
+
+The dashboard empowers business stakeholders—such as sales managers, marketing teams, and executives—to make data-driven decisions through a clear view of:
 
 Overall sales performance
 
@@ -14,11 +17,9 @@ Geographical sales distribution
 
 Payment method utilization and status
 
-Dataset
-The project uses a single flat-file data source:
+📊 Dataset
 
 File: ec_data.csv
-
 Description: A transactional dataset containing detailed order information.
 
 Key Columns:
@@ -45,34 +46,20 @@ Country
 
 Continent
 
-Tools & Technologies Used
-This project relies on the Microsoft Power BI ecosystem:
+🧰 Tools & Technologies Used
+Microsoft Power BI Desktop
 
-Microsoft Power BI Desktop:
-
-Use: The primary tool used for the entire project.
+Use: Primary tool for the entire project.
 
 Functions:
 
-Data Ingestion: Connecting to and importing the ec_data.csv file.
+Data Ingestion: Connecting and importing the ec_data.csv file.
 
-Data Modeling: Creating relationships, defining hierarchies, and building a robust data model (as indicated by the .pbix filename).
+Data Modeling: Creating relationships, hierarchies, and a robust data model.
 
-Data Visualization: Designing the interactive report, charts, tables, and maps.
+Data Visualization: Designing interactive reports, charts, tables, and maps.
 
-DAX (Data Analysis Expressions): Writing custom formulas (measures and calculated columns) to derive insights not available in the raw data (e.g., Year-over-Year Sales, Total Pending Orders, etc.).
-
-Power Query (M Language):
-
-Use: Integrated within Power BI Desktop for ETL (Extract, Transform, Load).
-
-Functions: Used to clean and transform the raw CSV data before loading it into the model. This could include changing data types, handling null values, or splitting columns.
-
-DAX (Data Analysis Expressions):
-
-Use: The formula language used inside Power BI.
-
-Functions: Essential for creating the "brains" of the report. This project likely uses DAX to create key measures such as:
+DAX (Data Analysis Expressions): Writing formulas to calculate metrics such as:
 
 Total Sales
 
@@ -80,54 +67,81 @@ Total Orders
 
 Average Order Value
 
-Time-intelligence functions (e.g., SAMEPERIODLASTYEAR, DATESYTD)
+Year-over-Year Sales
 
-Project Structure
-/ec_data.csv: The raw, unprocessed e-commerce sales data.
+Total Pending Orders
 
-/ec_Data Modeling.pbix: The complete Power BI project file. This file contains the data model, all data transformations (Power Query steps), all DAX measures, and the final report visualizations.
+Power Query (M Language)
 
-How to Use This Project
-To explore this report:
+Use: Integrated within Power BI for ETL (Extract, Transform, Load) operations.
 
-Prerequisites: You must have Microsoft Power BI Desktop (a free application for Windows) installed on your computer.
+Functions:
 
-Clone the Repository: Download or clone this repository to your local machine.
+Cleaning and transforming raw CSV data.
 
-Bash
+Changing data types, handling nulls, and splitting or merging columns before loading to the model.
 
+DAX (Data Analysis Expressions)
+
+Use: Formula language inside Power BI for building measures and calculations.
+
+Functions:
+Used to define business logic for:
+
+Total Sales
+
+Total Orders
+
+Average Order Value
+
+Time Intelligence (e.g., SAMEPERIODLASTYEAR, DATESYTD)
+
+📂 Project Structure
+/ec_data.csv                # Raw e-commerce sales dataset
+/ec_Data Modeling.pbix      # Power BI project file with model, DAX, and visuals
+
+⚙️ How to Use This Project
+1. Prerequisites
+
+Install Microsoft Power BI Desktop (free application for Windows).
+
+2. Clone the Repository
 git clone [your-repository-url]
-Open the Report: Navigate to the project folder and open the ec_Data Modeling.pbix file.
 
-Update Data Source (If Necessary):
+3. Open the Report
 
-Power BI reports save the absolute path to their data sources. When you open the file on a new computer, it will likely show an error because it cannot find the ec_data.csv file at its original location.
+Navigate to the project folder and open the ec_Data Modeling.pbix file.
 
-To fix this:
+4. Update the Data Source (If Necessary)
 
-In Power BI Desktop, go to the Home tab and click Transform data -> Data source settings.
+If you encounter a missing file error:
 
-Select the ec_data.csv source (it will have an error icon).
+Go to Home → Transform data → Data source settings
 
-Click Change Source....
+Select the ec_data.csv source (it will show an error icon)
 
-Click Browse and navigate to the ec_data.csv file in the folder you just cloned.
+Click Change Source...
 
-Click OK and then Close.
+Browse and select the local ec_data.csv file
 
-Click Refresh on the Home tab to load the data.
+Click OK → Close → Refresh
 
-Potential Dashboard Features
-(Based on the provided data, this report likely contains the following visualizations)
+📈 Potential Dashboard Features
 
-KPI Cards: Total Sales, Total Orders, Average Order Value.
+The Power BI report likely includes:
 
-Geographical Map: Sales by Country or Continent.
+KPI Cards: Total Sales, Total Orders, Average Order Value
 
-Bar Charts: Top 10 Products by Sales, Sales by Category.
+Geographical Map: Sales by Country or Continent
 
-Pie / Donut Charts: Order breakdown by Payment Status (Completed, Pending, Failed), Sales by Payment Method.
+Bar Charts: Top 10 Products by Sales, Sales by Category
 
-Line Chart: Sales trend over time (by Date).
+Pie / Donut Charts: Orders by Payment Status (Completed, Pending, Failed), Sales by Payment Method
 
-Slicers: Interactive filters for Year, Continent, Category, and Payment Status.
+Line Chart: Sales Trend over Time
+
+Slicers: Filters for Year, Continent, Category, and Payment Status
+
+📎 Summary
+
+This project demonstrates end-to-end data analytics using Power BI, from data ingestion and cleaning to modeling and visualization, helping businesses uncover valuable insights from e-commerce transactions.
